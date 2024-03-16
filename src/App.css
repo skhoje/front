@@ -1,38 +1,57 @@
+/* App.css */
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+main {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.folder {
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 5px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.subfolders {
+  padding-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.file {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.file span:nth-child(1) {
+  margin-right: 8px;
+  /* Add some distance between file name and kebab menu */
+}
+
+.menu {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  z-index: 1;
+}
+
+.menu div {
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+.menu div:hover {
+  background-color: #f1f1f1;
+}
+
+button {
+  margin-top: 10px;
 }
