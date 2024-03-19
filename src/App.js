@@ -75,7 +75,7 @@ function App() {
 
 	async function getData() {
 		try {
-			const res = await axios.get("http://localhost:5000/api/getTree")
+			const res = await axios.get("https://backend-2-78ub.onrender.com/api/getTree")
 			setFoldersList(res.data.data)
 			console.log(res.data.data);
 		} catch (error) {
@@ -87,7 +87,7 @@ function App() {
 	async function setData(values) {
 		try {
 			// type, name , children , parentId
-			const res = await axios.post("http://localhost:5000/api/setTree", values)
+			const res = await axios.post("https://backend-2-78ub.onrender.com/api/setTree", values)
 			getData()
 			toast.success(res.data?.message)
 			// console.log(res);
@@ -100,7 +100,7 @@ function App() {
 	async function deleteData(values) {
 		try {
 			// _id
-			const res = await axios.post("http://localhost:5000/api/deleteTree", values)
+			const res = await axios.post("https://backend-2-78ub.onrender.com/api/deleteTree", values)
 			getData()
 			toast.success(res.data?.message)
 			// console.log(res);
