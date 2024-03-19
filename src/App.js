@@ -21,7 +21,7 @@ function App() {
 			<div>
 				<button type="button" className="btn btn-primary" onClick={handleAddFolder}>Add Folder</button>
 				<ol>
-					{foldersList.map(item => (
+					{foldersList.map(item => item.type == "folder" && (
 						<li key={item.id}>
 							<div>
 								{item.name}&nbsp;&nbsp;
@@ -29,7 +29,7 @@ function App() {
 								<button type="button" className="btn btn-primary" onClick={() => handleDeleteFolder(item)}>Delete Folder</button>
 							</div>
 							<ul>
-								{foldersList.filter(subItem => subItem.parentId === item.id).map(subItem => (
+								{foldersList.filter(subItem => subItem.parentId === item._id).map(subItem => (
 									<li key={subItem.id}>
 										{subItem.name}&nbsp;&nbsp;
 										<button type="button" className="btn btn-primary" onClick={() => handleDeleteFile(subItem)}>Delete File</button>
