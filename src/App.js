@@ -21,7 +21,7 @@ function App() {
 			<div>
 				<button type="button" className="btn btn-primary" onClick={handleAddFolder}>Add Folder</button>
 				<ol>
-					{foldersList.map(item => item.type == "folder" && (
+					{foldersList.map(item => item.type === "folder" && (
 						<li key={item.id}>
 							<div>
 								{item.name}&nbsp;&nbsp;
